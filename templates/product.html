@@ -10,10 +10,16 @@
 
         <!--Grid column-->
         <div class="col-md-6 mb-4">
+          <!--<img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/14.jpg" class="img-fluid" alt="">
+          <img src="/media/hqdefault_05Cn6KR.jpg" class="card-img-top">-->
+         <img src="{{ object.image.url }}" class="card-img-top">{{ object.discount_price }} </div>
+              <!--  <a href="">  <img src="{{ Item.image.url }}" alt=""></a>
 
-          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/14.jpg" class="img-fluid" alt="">
 
-        </div>
+                <span class="badge purple mr-1">{{ object.get_category_display }}</span>
+              </a>
+          <p>{{ object.description }}</p>-->
+
         <!--Grid column-->
 
         <!--Grid column-->

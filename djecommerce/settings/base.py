@@ -1,10 +1,14 @@
 import os
 from decouple import config
-
+import django_heroku
 BASE_DIR = os.path.dirname(os.path.dirname(
     os.path.dirname(os.path.abspath(__file__))))
 
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = 'ugyw05n_(pf#o9#ec92ql9qff3pa7e^zq&=r(^me4%%y+!-h=%'
+
+
+
+#SECRET_KEY = config('SECRET_KEY')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -40,6 +44,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'templates')],
+         # 'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -78,5 +83,7 @@ SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 
 # CRISPY FORMS
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# CRISPY FORMS
+django_heroku.settings(locals())
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
